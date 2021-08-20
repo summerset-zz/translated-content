@@ -11,11 +11,13 @@ original_slug: Web/CSS/Common_CSS_Questions
 <p>现代浏览器主要有两种渲染模式：</p>
 
 <ul>
- <li><em>怪异模式：</em> 又称向后兼容模式,，允许将传统网页渲染为作者意图。 旧浏览器使用的非标准渲染规则。 不完整的、不正确的、缺少DOCTYPE声明或已知的DOCTYPE声明中普遍使用2001年以前的文件将在怪异模式中呈现。</li>
- <li><em>标准模式：</em>浏览器试图严格遵守W3C标准。新HTML网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代DOCTYPE声明的页面将被用标准模式呈现。</li>
+    <li><em>怪异模式：</em> 又称向后兼容模式,，允许将传统网页渲染为作者意图。 旧浏览器使用的非标准渲染规则。 不完整的、不正确的、缺少DOCTYPE声明或已知的DOCTYPE声明中普遍使用2001年以前的文件将在怪异模式中呈现。
+    </li>
+    <li><em>标准模式：</em>浏览器试图严格遵守W3C标准。新HTML网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代DOCTYPE声明的页面将被用标准模式呈现。</li>
 </ul>
 
-<p>基于Gecko的浏览器， 有三分之一 <em><a href="https://developer.mozilla.org/en-US/docs/Gecko's_%22Almost_Standards%22_Mode">Almost Standards Mode</a></em>， 只有一些小怪癖。</p>
+<p>基于Gecko的浏览器， 有三分之一 <em><a href="https://developer.mozilla.org/en-US/docs/Gecko's_%22Almost_Standards%22_Mode">Almost
+            Standards Mode</a></em>， 只有一些小怪癖。</p>
 
 <p>这是最常用的触发标准模式或准标准模式的DOCTYPE声明列表：</p>
 
@@ -35,18 +37,20 @@ original_slug: Web/CSS/Common_CSS_Questions
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
 </pre>
 
-<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered">为什么我有效的css完全没有被渲染？ </h2>
+<h2 id="My_CSS_is_valid.2C_but_not_correctly_rendered" name="My_CSS_is_valid.2C_but_not_correctly_rendered">
+    为什么我有效的css完全没有被渲染？ </h2>
 
 <p>为了使浏览器渲染样式文件，CSS样式表必须用text/css的MIME。如果Web服务器不服务于这种类型，则CSS也不会被应用。</p>
 
 <h2 id="Difference_between_id_and_class" name="Difference_between_id_and_class">id和class有什么不同？</h2>
 
 <p>HTML元素可以拥有一个id/或class属性。 id属性为元素指定应用一个有效名称，只能有一个具有该名称的元素。class属性指定一个类名的元素，而这个名称可以被页面内的许多元素被使用。 CSS允许你可以对特定的id和/或类名的元素应用样式。<br>
- <br>
- 当你想给一个特定元素或块应用样式规则时就使用ID选择符。此样式将只用于与该特定id匹配的元素。</p>
+    <br>
+    当你想给一个特定元素或块应用样式规则时就使用ID选择符。此样式将只用于与该特定id匹配的元素。
+</p>
 
 <p><br>
- 当你想要将样式规则应用于多个块和元素时，你应该使用class选择符。</p>
+    当你想要将样式规则应用于多个块和元素时，你应该使用class选择符。</p>
 
 <p>较少样式的样式表通常性能更高。因此建议尽可能多地使用类， 保留id作为特定用途 (比如链接label标签和form元素或者为语义上唯一的元素应用样式)。</p>
 
@@ -54,13 +58,14 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 <h2 id="Restoring_the_default_property_value" name="Restoring_the_default_property_value">我如何还原属性的默认值？</h2>
 
-<p>最初CSS没有提供“defaule”关键字和还原默认属性的值，唯一途径是显式地重新声明该属性。</p>
+<p>最初CSS没有提供“default”关键字和还原默认属性的值，唯一途径是显式地重新声明该属性。</p>
 
 <p>与CSS2相比，已经发生了改变。 关键字 <a href="/es/CSS/initial" title="initial">initial</a> 现在是一个有效的CSS属性。它将给定的CSS属性值重置为默认值。</p>
 
 <h2 id="Derived_styles" name="Derived_styles">我如何才可以从一个样式中衍生出另一种样式?</h2>
 
-<p>CSS 不允许这样做。(See <a class="external" href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer's note about the Working Group's stance)</a>. 但是，将多个类分配给单个元素，可以提供相同的效果。</p>
+<p>CSS 不允许这样做。(See <a class="external" href="http://archivist.incutio.com/viewlist/css-discuss/2685">Eric Meyer's note
+        about the Working Group's stance)</a>. 但是，将多个类分配给单个元素，可以提供相同的效果。</p>
 
 <h2 id="Assigning_multiple_classes" name="Assigning_multiple_classes">我该如何给一个元素分配多个类？</h2>
 
@@ -80,45 +85,45 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 <h2 id="Style_rules_that_don.27t_work" name="Style_rules_that_don.27t_work">为什么我的样式规则不能正确地工作？</h2>
 
-<p>在语法上正确的样式规则可能在某些情况下不适用。你可以使用 <a href="/en/DOM_Inspector" title="en/DOM_Inspector">DOM Inspector</a>'s <em>CSS Style Rules</em> 调试这类问题。 下面列出了最常见的忽略样式规则的实例：</p>
+<p>在语法上正确的样式规则可能在某些情况下不适用。你可以使用 <a href="/en/DOM_Inspector" title="en/DOM_Inspector">DOM Inspector</a>'s <em>CSS Style
+        Rules</em> 调试这类问题。 下面列出了最常见的忽略样式规则的实例：</p>
 
 <h3 id="HTML_elements_hierarchy" name="HTML_elements_hierarchy">HTML元素层次结构</h3>
 
-<p>The way CSS styles are applied to HTML elements depends also on the elements hierarchy. It is important to remember that a rule applied to a descendent overrides the style of the parent, in spite of any specificity or priority of CSS rules.</p>
+<p>在HTML中应用CSS样式将会按照元素继承关系进行。请牢记，向子元素直接应用的样式将会覆盖继承父元素的样式，该优先级顺序也将覆盖CSS规则的优先级顺序。</p>
 
 <pre>.news { color: black; }
 .corpName { font-weight: bold; color: red; }
 
-&lt;!-- news item text is black, but corporate name is red and in bold --&gt;
+&lt;!-- news元素的颜色将变成黑色，但corpName将变为红色且加粗。 --&gt;
 &lt;div class="news"&gt;
    (Reuters) &lt;span class="corpName"&gt;General Electric&lt;/span&gt; (GE.NYS) announced on Thursday...
 &lt;/div&gt;
 </pre>
 
-<p>In case of complex HTML hierarchies, if a rule seems to be ignored, check if the element is inside another element with a different style.</p>
+<p>在复杂的HTML继承关系场景下，如果一个CSS规则无效，可以检查一下他是否被父级元素的样式所覆盖。</p>
 
-<h3 id="Explicitly_re-defined_style_rule" name="Explicitly_re-defined_style_rule">显式重定义样式规则</h3>
+<h3 id="Explicitly_re-defined_style_rule" name="Explicitly_re-defined_style_rule">显式多重定义样式规则</h3>
 
-<p>In CSS stylesheets, order <strong>is</strong> important. If you define a rule and then you re-define the same rule, the last definition is used.</p>
+<p>在CSS样式表中，定义规则的顺序同样重要。如果重复定义了统一规则，之后新定义的会生效。</p>
 
 <pre>#stockTicker { font-weight: bold; }
 .stockSymbol { color: red; }
-/*  other rules             */
-/*  other rules             */
-/*  other rules             */
+/*  其他规则            */
+/*  其他规则            */
+/*  其他规则         */
 .stockSymbol { font-weight: normal; }
 
-&lt;!-- most text is in bold, except "GE", which is red and not bold --&gt;
+&lt;!-- 除了GE是红色、不加粗之外，其他文本都是默认颜色加粗 --&gt;
 &lt;div id="stockTicker"&gt;
    NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...
 &lt;/div&gt;
 </pre>
-
-<p>To avoid this kind of error, try to define rules only once for a certain selector, and group all rules belonging to that selector.</p>
+<p>为了避免这种失误，你可以尝试对同一选择器只定义一次规则，并将多种规则合并到该选择器。</p>
 
 <h3 id="Use_of_a_shorthand_property" name="Use_of_a_shorthand_property">使用便捷属性</h3>
 
-<p>Using shorthand properties for defining style rules is good because it uses a very compact syntax. Using shorthand with only some attributes is possible and correct, but it must be remembered that undeclared attributes are automatically reset to default. This means that a previous rule for a single attribute could be implicitly overridden.</p>
+<p>便捷属性的好处在于他的语言结构非常紧凑。使用便捷属性时可以只设置必要的属性，未设置的属性将被自动设置为默认。因此，如果之前单独设置过某个属性然后又设置了便捷属性，之前设置的属性将会失效。</p>
 
 <pre>#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
 .stockSymbol { font: 14px Arial; color: red; }
@@ -127,18 +132,18 @@ original_slug: Web/CSS/Common_CSS_Questions
    NYS: &lt;span class="stockSymbol"&gt;GE&lt;/span&gt; +1.0 ...
 &lt;/div&gt;
 </pre>
-
-<p>In the previous example the problem occurred on rules belonging to different elements, but it could happen also for the same element, because rule order <strong>is</strong> important.</p>
+<p>上例中战士了不同元素因继承关系和便捷属性而造成的失效问题（font属性中没有设置font-weight，因而造成stockSymbol的font-weight被重置）。这种情况也会发生在相同元素的属性中，因此规则的顺序也很重要。
+</p>
 
 <pre>#stockTicker {
    font-weight: bold;
-   font: 12px Verdana;  /* font-weight is now normal */
+   font: 12px Verdana;  /* font-weight被重置为默认值(normal) */
 }
 </pre>
 
 <h3 id="Use_of_the_.2A_selector" name="Use_of_the_.2A_selector">使用 <code>*</code> 选择器</h3>
 
-<p>The <code>*</code> wildcard selector refers to any element, and it has to be used with particular care.</p>
+<p>通配选择器<code>*</code>可以代表任意元素，因而需要小心使用。</p>
 
 <pre>body * { font-weight: normal; }
 #stockTicker { font: 12px Verdana; }
@@ -149,14 +154,15 @@ original_slug: Web/CSS/Common_CSS_Questions
    NYS: &lt;span class="corpName"&gt;&lt;span class="stockUp"&gt;GE&lt;/span&gt;&lt;/span&gt; +1.0 ...
 &lt;/div&gt;
 </pre>
+<p>在上例中，<code>body *</code>将会选中body下任意层级的所有元素，包括带有.stockUp的元素。因此.corpName规则中的<code>font-weight:bold</code>将会被<code>body *</code>的<code>font-weight: bold;</code>规则覆盖。
+</p>
 
-<p>In this example the <code>body *</code> selector applies the rule to all elements inside body, at any hierarchy level, including the .stockUp class. So <code>font-weight: bold;</code> applied to the .corpName class is overridden by <code>font-weight: normal;</code> applied to all elements in the body.</p>
-
-<p>The use of the * selector should be minimized as it is a slow selector, especially when not used as the first element of a selector. Its use should be avoided as much as possible.</p>
+<p>你应当尽量减少使用统配选择器，因为该选择器运行会比较慢，尤其是当没有其他选择器限制时。</p>
 
 <h3 id="Specificity_in_CSS" name="Specificity_in_CSS">CSS 中的优先级</h3>
 
-<p>When multiples rules apply to a certain element, the rule chosen depends on its style <a href="/en/CSS/Specificity" title="Specificity">specificity</a>. Inline style (in HTML <code>style</code> attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.</p>
+<p>多种选择器对同一元素生效时，规则将会按照一定的<a href="/en/CSS/Specificity"
+        title="Specificity">优先级</a>生效。行内样式（写在HTML元素的style属性中的样式）优先级第一，ID选择器（#）其次，类选择器（.）第三，元素名称选择器最末。
 
 <pre>div { color: black; }
 #orange { color: orange; }
@@ -164,21 +170,23 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 &lt;div id="orange" class="green" style="color: red;"&gt;This is red&lt;/div&gt;
 </pre>
+当选择器具有多个部分时，优先级规则将会更加复杂。你可以访问<a class="external" href="http://www.w3.org/TR/CSS21/cascade.html#specificity">CSS 2.1
+    Specification chapter 6.4.3</a>获得有关选择器运算方式的更多细节。
 
-<p>The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the <a class="external" href="http://www.w3.org/TR/CSS21/cascade.html#specificity">CSS 2.1 Specification chapter 6.4.3</a></p>
+<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F">
+     -moz-*， -ms-*， -webkit-*， -o-* 以及 -khtml-* 属性有什么用？</h2>
 
-<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F"> -moz-*， -ms-*， -webkit-*， -o-* 以及 -khtml-* 属性有什么用？</h2>
+<p>上述属性通常被称作<b>属性前缀</b>。属性前缀是标准CSS之外的扩展，通常是用于实验或非标准的属性的命名空间前缀，以防止对标准属性造成污染。</p>
 
-<h2 id="What_do_the_-moz-.2A_properties_do.3F" name="What_do_the_-moz-.2A_properties_do.3F"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">These  properties, called </span><em>prefixed properties</em><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">, are extension to the CSS standard. They are used to use experimental and non-standard features without polluting the regular namespace, preventing future incompatibilities to arise when the standard is extended.</span></h2>
+<p>我们不建议在生产环境的网站中使用此类属性。如果一定要使用，你应当做好未来改进的准备：这类属性的效果可能会变更或者失效。</p>
 
-<p>The use of such properties on production websites is not recommended. If nevertheless needed, you are hinted to make a plan for the website evolution: these prefixed properties can be modified or even suppressed when the standard evolve.</p>
-
-<p>Please see the <a class="internal" href="/en/CSS/CSS_Reference/Mozilla_Extensions" title="en/CSS Reference/Mozilla Extensions">Mozilla CSS Extensions</a> page for more information on the Mozilla-prefixed CSS properties.</p>
+<p>请参考<a class="internal" href="/en/CSS/CSS_Reference/Mozilla_Extensions"
+        title="en/CSS Reference/Mozilla Extensions">Mozilla CSS Extensions</a>获取有关-moz-*前缀属性的更多信息。
 
 <h2 id="z-index_属性与定位有什么关系？">z-index 属性与定位有什么关系？</h2>
 
-<p>z-index属性指定了元素的栈序。</p>
+<p>z-index属性指定了元素的层叠顺序。</p>
 
-<p>有较高z-index/栈序的元素总是在有着较低z-index/栈序的元素之前。</p>
+<p>有较高z-index的元素总是在有着较低z-index的元素之前。</p>
 
-<p>z-index只会在有着指定position (<code>position:absolute</code>, <code>position:relative</code>, or <code>position:fixed</code>)的元素上工作。</p>
+<p>z-index只会在有着这些position属性的元素上工作：<code>absolute</code>, <code>relative</code><code>fixed</code>。</p>
